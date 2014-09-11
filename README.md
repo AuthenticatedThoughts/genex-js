@@ -1,7 +1,7 @@
-genex.js
+genex
 --------
 
-Genex module for Node.js
+Genex module for browsers and Node.js
 
 Usage
 -----
@@ -24,7 +24,7 @@ console.log('Total strings generated: ' + count);
 Install
 -------
 
-	npm install genex.js
+	npm install genex
 
 License
 -------
