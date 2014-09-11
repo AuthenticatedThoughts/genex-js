@@ -3,11 +3,17 @@ genex
 
 Genex module for browsers and Node.js
 
+This is a browser-compatible dependency-free fork.
+
+Original code by @alixalex.
+
 Usage
 -----
 
 ```js
-var genex = require('genex');
+if( typeof require == 'function' ) {
+	var genex = require('genex');
+}
 
 var regex = /(foo|bar|baz)\d\1/;
 var count = genex(regex).count();
@@ -20,11 +26,6 @@ if (count <= 1000) {
 
 console.log('Total strings generated: ' + count);
 ```
-
-Install
--------
-
-	npm install genex
 
 License
 -------

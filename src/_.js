@@ -1,5 +1,5 @@
 // Uncompressed version of the _ object replacement functions
-// used in index.js
+// used in genex.js
 
 function _contains(array, needle){
   for( var i = 0, l = array.length; i < l; i++ ) {
