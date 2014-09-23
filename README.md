@@ -5,7 +5,7 @@ Genex module for browsers and Node.js
 
 This is a browser-compatible dependency-free fork.
 
-Original code by @alixalex.
+Original code by @alixaxel.
 
 Usage
 -----
