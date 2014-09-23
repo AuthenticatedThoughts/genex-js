@@ -1,8 +1,7 @@
 // This is a browserified version of ret.js Npm by fent.
-// 
-// WARNING: Untested
+// Tokenizes regular expressions.
 
-var ret = function()
+var ret = (function()
 {
     var index = function(regexpStr) {
       var i = 0, l, c,
@@ -288,7 +287,7 @@ var ret = function()
     },
 
     // sets.js
-    sets = function() {
+    sets = (function(){
         var exports = {};
 
         var INTS = function() {
@@ -373,10 +372,10 @@ var ret = function()
         };
 
         return exports;
-    }(),
+    })(),
 
     // util.js
-    util = function() {
+    util = (function(){
         var exports = {};
 
         // All of these are private and only used by randexp.
@@ -483,7 +482,7 @@ var ret = function()
         };
 
         return exports;
-    }(),
+    })(),
 
     // positions.js
     positions = {
@@ -515,6 +514,4 @@ var ret = function()
 
     return index.types = types, index.sets = sets, index.util = util, index.positions = positions, index;
 
-}
-
-}();
+})();
