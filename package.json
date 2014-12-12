@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/flatr0ze/genex.js.git"
+    "url": "git://github.com/AuthenticatedThoughts/genex-js.git"
   },
   "keywords": [
     "regex",
@@ -23,7 +23,7 @@
   "author": "Alix Axel (https://github.com/alixaxel/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/flatr0ze/genex.js/issues"
+    "url": "https://github.com/alixaxel/genex.js/issues"
   },
-  "homepage": "https://github.com/flatr0ze/genex.js"
+  "homepage": "https://github.com/alixaxel/genex.js"
 }
