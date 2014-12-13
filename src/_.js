@@ -1,34 +1,35 @@
 // Uncompressed version of the _ object replacement functions
 // used in genex.js
 
-function _contains(array, needle){
-  for( var i = 0, l = array.length; i < l; i++ ) {
-    if( array[i] === needle ) return true;
-  }
-  return false;
-}
-function _intersection(array) {
-  if (array == null) return [];
-  var result = [];
-  var argsLength = arguments.length;
-  for (var i = 0, length = array.length; i < length; i++) {
-    var item = array[i];
-    if (_contains(result, item)) continue;
-    for (var j = 1; j < argsLength; j++) {
-      if (!_contains(arguments[j], item)) break;
-    }
-    if (j === argsLength) result.push(item);
-  }
-  return result;
-}
-function _difference(array, bar){
-  var diff = [];
+var _={
+    difference: function(a, b) {
+      var c = [];
 
-  array.forEach(function(key) {
-    if (!_contains(bar, key)) {
-      diff[diff.length] = key;
-    }
-  }, this);
+      a.forEach(function(key) {
+        if (-1 === b.indexOf(key)) {
+          c.push(key);
+        }
+      }, this);
 
-  return diff;
-}
+      return c;
+    },
+    intersection: function(a, b) {
+      var ai = 0,
+          bi = 0;
+      var result = new Array();
+
+      while (ai < a.length && bi < b.length) {
+        if (a[ai] < b[bi]) {
+          ai++;
+        } else if (a[ai] > b[bi]) {
+          bi++;
+        } else /* they're equal */
+        {
+          result.push(a[ai]);
+          ai++;
+          bi++;
+        }
+      }
+      return result;
+    }
+  };
